@@ -11,6 +11,7 @@ on:
 jobs:
   pr-lint:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: morrisoncole/pr-lint-action@v1.7.0
         with:
