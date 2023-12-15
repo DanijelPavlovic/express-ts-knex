@@ -1,6 +1,6 @@
 import { Express } from "express";
 import RouteGroup from "express-route-grouping";
-import TestController from "../controllers/TestController";
+import UserController from "../controllers/UserController";
 
 export default function (app: Express) {
   const root = new RouteGroup("/", app);
@@ -10,9 +10,9 @@ export default function (app: Express) {
       res.send("Hello World");
     });
 
-    api.group("/test", ({ resource }) => {
+    api.group("/user", ({ resource }) => {
       resource({
-        handlers: new TestController(),
+        handlers: new UserController(),
       });
     });
   });

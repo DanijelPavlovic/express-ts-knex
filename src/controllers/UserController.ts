@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-class TestController {
+class UserController {
   index = (req: Request, res: Response) => {
     res.send("Test Controller Index");
   };
@@ -25,4 +25,4 @@ class TestController {
   };
 }
 
-export default TestController;
+export default UserController;
